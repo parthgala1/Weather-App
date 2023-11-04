@@ -7,7 +7,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-const img = "/pulic/images/Sunny.jpg";
 
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -7,19 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container" action = "/">
-        
-        <div class="we image">
-            <img src= "D:\Web Development\Backend\Weather\public\images\Sunny.jpg" alt="day" />
+        <h1 class="header">Weather App</h1>
+        <div class="container">
+            <img src= "D:\Web Development\Backend\Weather\public\images\Hailstone.jpg" alt="day" class="image" />
+            <div class="grid">
+                    <input type="text" id="cityName" placeholder="City Name"/>
+                    <button class="search" onclick="getData()" action="/search">Search</button>
+                <div class="we date">
+                    <h1>4th Nov</h1>
+                </div>
+                <div class="we degCal">
+                    <h1>32deg</h1>
+                </div>
+            </div>
+            
         </div>
-        <div class="we degCel">
-            <h1>32deg</h1>
-        </div>
-        <div class="we quality">
-
-        </div>
-        
-    </div>
     
     <script src="../index.js"></script>
 </body>
