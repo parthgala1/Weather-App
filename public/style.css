@@ -1,20 +1,53 @@
 body{
     height: 100vh;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .container{
-    height: 50vh;
-    width: 50%;
+    height: 70vh;
+    width: 150vh;
     background-color: rgb(218, 218, 221);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 5px 5px 10px rgb(180, 180, 180);
 }
 
 h1{
     text-align: center;
+
+}
+
+img{
+    height: 50vh;
+    width: 40vh;
+    object-fit: cover;
+}
+
+.image{
+    height: 50vh;
+    width: 40vh;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 5px 5px 10px rgb(180, 180, 180);
+    position: relative;
+}
+
+.we{
+    
+}
+
+.degCal{
+    position: absolute;
+    height: 30vh;
+    width: 50vh;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
 }
