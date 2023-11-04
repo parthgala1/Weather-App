@@ -1,5 +1,5 @@
 import express from 'express';
-import hbs from "hbs";
+const hbs = require("hbs");
 import { dirname } from 'path';
 import { join } from "path";
 
