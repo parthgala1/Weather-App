@@ -1,13 +1,9 @@
 import express from 'express';
-const hbs = require("hbs");
-import { dirname } from 'path';
+import { registerPartials } from "hbs";
 import { join } from "path";
-
-
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
-import weatherData from '../utils/weatherData.js';
-import { fileURLToPath } from 'url';
+
+import weatherData from '../utils/weatherData';
 
 const port = process.env.PORT || 3000
 
@@ -19,7 +15,7 @@ const partialsPath = join(__dirname, '../templates/partials');
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
-hbs.registerPartials(partialsPath);
+registerPartials(partialsPath);
 app.use(express.static(publicStaticDirPath));
 
 app.get('', (req, res) => {
