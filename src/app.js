@@ -1,21 +1,21 @@
-import express from 'express';
-import { registerPartials } from "hbs";
-import { join } from "path";
+const express = require('express');
+const hbs = require("hbs");
+const path = require("path");
 const app = express();
 
-import weatherData from '../utils/weatherData';
+const weatherData = require('../utils/weatherData');
 
 const port = process.env.PORT || 3000
 
-const publicStaticDirPath = join(__dirname, '../public')
+const publicStaticDirPath = path.join(__dirname, '../public')
 
-const viewsPath = join(__dirname, '../templates/views');
+const viewsPath = path.join(__dirname, '../templates/views');
 
-const partialsPath = join(__dirname, '../templates/partials');
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
-registerPartials(partialsPath);
+hbs.registerPartials(partialsPath);
 app.use(express.static(publicStaticDirPath));
 
 app.get('', (req, res) => {
@@ -57,4 +57,4 @@ app.get("*", (req, res) => {
 
 app.listen(port, () => {
     console.log("Server is up and running on port: ", port);
-})
+})  
